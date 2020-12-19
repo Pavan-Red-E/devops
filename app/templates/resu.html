@@ -1,0 +1,2417 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Movie reviews</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% load static %}
+    <link rel="icon" href="{% static "img/fav.png" %}">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "fontss/icomoon/style.css" %}">
+
+    <link rel="stylesheet" href="{% static "csss/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "csss/jquery-ui.css" %}">
+    <link rel="stylesheet" href="{% static "csss/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "csss/owl.theme.default.min.css" %}">
+    <link rel="stylesheet" href="{% static "csss/owl.theme.default.min.css" %}">
+
+    <link rel="stylesheet" href="{% static "csss/jquery.fancybox.min.css" %}">
+
+    <link rel="stylesheet" href="{% static "csss/bootstrap-datepicker.css" %}">
+
+    <link rel="stylesheet" href="{% static "fontss/flaticon/font/flaticon.css" %}">
+
+    <link rel="stylesheet" href="{% static "csss/aos.css" %}">
+
+    <link rel="stylesheet" href="{% static "csss/style.css" %}">
+    
+  </head>
+  <style type="text/css">
+.tg  {border-collapse:collapse;border-color:#bbb;border-spacing:0;}
+.tg td{background-color:#E0FFEB;border-color:#bbb;border-style:solid;border-width:0px;color:#594F4F;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#9DE0AD;border-color:#bbb;border-style:solid;border-width:0px;color:#493F3F;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+.tg .tg-sjuo{background-color:#C2FFD6;text-align:left;vertical-align:top}
+</style>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    <div class="top-bar py-3 bg-light" id="home-section">
+      <div class="container">
+        <div class="row align-items-center">
+         
+          <div class="col-6 text-left">
+            <ul class="social-media">
+              <li><a href="https://www.facebook.com/analyticsdomain/" class=""><span class="icon-facebook"></span></a></li>
+              <li><a href="https://twitter.com/AnalyticsDomain" class=""><span class="icon-twitter"></span></a></li>
+              <li><a href="https://www.instagram.com/analytics_domain/" class=""><span class="icon-instagram"></span></a></li>
+              <li><a href="https://www.linkedin.com/company/analytics-domain/" class=""><span class="icon-linkedin"></span></a></li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <p class="mb-0 float-right">
+              <span class="mr-3"><a href="tel://#"> <span class="icon-phone mr-2" style="position: relative; top: 2px;"></span><span class="d-none d-lg-inline-block text-black">(+91) 0000 000 000</span></a></span>
+              <span><a href="/home/contact-us/"><span class="icon-envelope mr-2" style="position: relative; top: 2px;"></span><span class="d-none d-lg-inline-block text-black">contact@movie.com</span></a></span>
+            </p>
+            
+          </div>
+        </div>
+      </div> 
+    </div>
+
+    <header class="site-navbar py-4 bg-white js-sticky-header site-navbar-target" role="banner">
+
+      <div class="container">
+        <div class="row align-items-center">
+          
+          <div class="col-6 col-xl-2">
+            <h1 class="mb-0 site-logo"><a href="index.html" class="text-black mb-0"><img src="{% static "imagess/nulogo.png" %}" alt=""></a></h1>
+          </div>
+          <div class="col-12 col-md-10 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                
+                
+                <li><a href="/" class="nav-link">Logout</a></li>
+              </ul>
+            </nav>
+          </div>
+
+
+          <table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0lax"></th>
+    <th class="tg-0lax">Movie_name</th>
+    <th class="tg-0lax">Genre</th>
+    <th class="tg-0lax">reviews</th>
+    <th class="tg-0lax">Sentiment</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">0</td>
+    <td class="tg-sjuo">Peninsula</td>
+    <td class="tg-0lax">Thriller</td>
+    <td class="tg-sjuo">Very good movie for youths and teenagers. That whom loves adventure movies.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1</td>
+    <td class="tg-sjuo">Peninsula</td>
+    <td class="tg-0lax">Thriller</td>
+    <td class="tg-sjuo">Very good direction and very good acting too. Nice movie to watch in a weekend.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">2</td>
+    <td class="tg-sjuo">Peninsula</td>
+    <td class="tg-0lax">Thriller</td>
+    <td class="tg-sjuo">not as sequel, good for individual watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">3</td>
+    <td class="tg-sjuo">Peninsula</td>
+    <td class="tg-0lax">Thriller</td>
+    <td class="tg-sjuo">very good movie to watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">4</td>
+    <td class="tg-sjuo">Come Play</td>
+    <td class="tg-0lax">Mystery</td>
+    <td class="tg-sjuo">I did not like Babadook, but this one is actually different. One time watch movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">5</td>
+    <td class="tg-sjuo">Come Play</td>
+    <td class="tg-0lax">Mystery</td>
+    <td class="tg-sjuo">I just watched this movie yesterday. This is an amazing movie. You can watch with your family. So, I gave 4.5 stars.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">6</td>
+    <td class="tg-sjuo">Come Play</td>
+    <td class="tg-0lax">Mystery</td>
+    <td class="tg-sjuo">Great Movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">7</td>
+    <td class="tg-sjuo">Come Play</td>
+    <td class="tg-0lax">Mystery</td>
+    <td class="tg-sjuo">One time watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">8</td>
+    <td class="tg-sjuo">Come Play</td>
+    <td class="tg-0lax">Mystery</td>
+    <td class="tg-sjuo">Good Screenplay and direction. Story plot goes along.</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">9</td>
+    <td class="tg-sjuo">The Secret: Dare To Dream</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">Best movie watched over covid. Good family film. Happy sad emotional. I absolutely loved it</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">10</td>
+    <td class="tg-sjuo">The Secret: Dare To Dream</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">The main character is a grumpy stubborn old window who doesn’t use the teaching or techniques of the law of attraction but yet gets the perfect life.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">11</td>
+    <td class="tg-sjuo">The Secret: Dare To Dream</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">I absolutely loved it ❣It put a smile on my face , if your an avid secret fan like me by Rhonda Bryne.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">12</td>
+    <td class="tg-sjuo">The Secret: Dare To Dream</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">Good morning the story is good. The film has a good screenplay. All the actors were aptly selected and they have performed their role excellently...</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">13</td>
+    <td class="tg-sjuo">The Secret: Dare To Dream</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">Good Movie, Worth Watching it.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">14</td>
+    <td class="tg-sjuo">The War with grandpa</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">Best comedy I've seen in a long time. Don't know what all the bad reviews are about.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">15</td>
+    <td class="tg-sjuo">The War with grandpa</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">Enjoyed the subject matter and the fine acting by the female actors</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">16</td>
+    <td class="tg-sjuo">The War with grandpa</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">Great movie suggest you to see in theater</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">17</td>
+    <td class="tg-sjuo">The War with grandpa</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">Robert De Niro is a gifted artist. All his movies including this are amazing</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">18</td>
+    <td class="tg-sjuo">The War with grandpa</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">Interesting movie new concept</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">19</td>
+    <td class="tg-sjuo">Parasite</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">It's a story about a bankrupt family who cleverly placed themselves in the house of a well-to-do businessman.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">20</td>
+    <td class="tg-sjuo">Parasite</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">Perfectly showing the side of society, we ignore</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">21</td>
+    <td class="tg-sjuo">Parasite</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">One of the aweosme movie in long long time. Must watch for quality time spending</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">22</td>
+    <td class="tg-sjuo">Parasite</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">Love this movie!!the humour and the suspense,everything is so good ,a movie u can recommend to anyone</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">23</td>
+    <td class="tg-sjuo">Parasite</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">The rollercoster of dark emotionsPerfect oscar deserving movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">24</td>
+    <td class="tg-sjuo">1917</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">1917 is 1st World War story, is immersive to watch and movie sequence seems to be in continuous shot single take.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">25</td>
+    <td class="tg-sjuo">1917</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Very nice movie awesome thanks so much for the movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">26</td>
+    <td class="tg-sjuo">1917</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">makes the film an absolute viewing delight.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">27</td>
+    <td class="tg-sjuo">1917</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Tips to you on your site for me as the best for a long shot in to get to you by</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">28</td>
+    <td class="tg-sjuo">The Outpost</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">Good historical movie about war between humanity.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">29</td>
+    <td class="tg-sjuo">The Outpost</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">This is a great movie. Indeed there are, but there are a couple of great things about it:</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">30</td>
+    <td class="tg-sjuo">The Outpost</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">Like other war movies (some are boring)- here the location is Afganistan and we really enjoyed Taliban-American troops engagement</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">31</td>
+    <td class="tg-sjuo">The Outpost</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">The position of the outpost is brilliantly choose.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">32</td>
+    <td class="tg-sjuo">The Outpost</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">Very good story plot. One of the best flims i've ever watched.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">33</td>
+    <td class="tg-sjuo">Little Woman</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">Nice movie and drama movie review poster premiere</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">34</td>
+    <td class="tg-sjuo">Little Woman</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">they live in oblivion and their relationship grows and blossoms without being frowned upon.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">35</td>
+    <td class="tg-sjuo">Little Woman</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">Super drama movie by women life.this movie going to rock.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">36</td>
+    <td class="tg-sjuo">Little Woman</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">what a movie i like this movie thanks</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">37</td>
+    <td class="tg-sjuo">Little Woman</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">Excellent performance by the actors.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">38</td>
+    <td class="tg-sjuo">Birds of&nbsp;&nbsp;prey</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">It is just an ok movie , which shows lot of potential but slowly fades away since the directors seems not too sure what to do with other characters.</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">39</td>
+    <td class="tg-sjuo">Birds of&nbsp;&nbsp;prey</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">one of the best gangstaer movie of all time highly relatable to the joker movie nice acting with good dilogue delivery and nice plot.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">40</td>
+    <td class="tg-sjuo">Birds of&nbsp;&nbsp;prey</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">Super fun movie! Very violent (not for kiddies, sorry) but it was fun! Jokes were hilarious, some were in your face, others were subtle and easy to miss, very well done with showcasing Harley's trauma from her past in a subtle inobvious manner throughout the movie.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">41</td>
+    <td class="tg-sjuo">Birds of&nbsp;&nbsp;prey</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">The movie is good to watch among with the animation creation and well presented</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">42</td>
+    <td class="tg-sjuo">Birds of&nbsp;&nbsp;prey</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">Additionally, a young girl Cassandra (Ella Jay Basco) gets caught in the middle of Harley’s mayhem, along with Renee Montaya (Rosie Perez), Dinah Lance (Jurnee Smollett-Bell) and Helena Bertinelli (Mary Elizabeth Winstead).</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">43</td>
+    <td class="tg-sjuo">Jojo Rabbit</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">nice movie with sure watch to understand the world</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">44</td>
+    <td class="tg-sjuo">Jojo Rabbit</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">I like the film because acting direction dialogue were very best</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">45</td>
+    <td class="tg-sjuo">Jojo Rabbit</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">The concept of a modern-day genie seated in a posh resort</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">46</td>
+    <td class="tg-sjuo">Jojo Rabbit</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">i like this movie. thanks to director for a nice creation. thanks</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">47</td>
+    <td class="tg-sjuo">Jojo Rabbit</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">movie plot could have been better but acting is really good kudos to scarlett johansson</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">48</td>
+    <td class="tg-sjuo">The gentleman</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">very good movie to watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">49</td>
+    <td class="tg-sjuo">The gentleman</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">I did not like Babadook, but this one is actually different. One time watch movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">50</td>
+    <td class="tg-sjuo">The gentleman</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">I just watched this movie yesterday. This is an amazing movie. You can watch with your family. So, I gave 4.5 stars.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">51</td>
+    <td class="tg-sjuo">The gentleman</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">Great Movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">52</td>
+    <td class="tg-sjuo">The gentleman</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">One time watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">53</td>
+    <td class="tg-sjuo">The gentleman</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">Good Screenplay and direction. Story plot goes along.</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">54</td>
+    <td class="tg-sjuo">A Beautiful Day in the neighbourhood</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">It is just an ok movie , which shows lot of potential but slowly fades away since the directors seems not too sure what to do with other characters.</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">55</td>
+    <td class="tg-sjuo">A Beautiful Day in the neighbourhood</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">one of the best gangstaer movie of all time highly relatable to the joker movie nice acting with good dilogue delivery and nice plot.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">56</td>
+    <td class="tg-sjuo">A Beautiful Day in the neighbourhood</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Super fun movie! Very violent (not for kiddies, sorry) but it was fun! Jokes were hilarious, some were in your face, others were subtle and easy to miss, very well done with showcasing Harley's trauma from her past in a subtle inobvious manner throughout the movie.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">57</td>
+    <td class="tg-sjuo">A Beautiful Day in the neighbourhood</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">The movie is good to watch among with the animation creation and well presented</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">58</td>
+    <td class="tg-sjuo">A Beautiful Day in the neighbourhood</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Additionally, a young girl Cassandra (Ella Jay Basco) gets caught in the middle of Harley’s mayhem, along with Renee Montaya (Rosie Perez), Dinah Lance (Jurnee Smollett-Bell) and Helena Bertinelli (Mary Elizabeth Winstead).</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">59</td>
+    <td class="tg-sjuo">A Beautiful Day in the neighbourhood</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">nice movie with sure watch to understand the world</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">60</td>
+    <td class="tg-sjuo">trolls world tour</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">Best comedy I've seen in a long time. Don't know what all the bad reviews are about.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">61</td>
+    <td class="tg-sjuo">trolls world tour</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">Enjoyed the subject matter and the fine acting by the female actors</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">62</td>
+    <td class="tg-sjuo">trolls world tour</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">Great movie suggest you to see in theater</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">63</td>
+    <td class="tg-sjuo">trolls world tour</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">Robert De Niro is a gifted artist. All his movies including this are amazing</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">64</td>
+    <td class="tg-sjuo">trolls world tour</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">Interesting movie new concept</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">65</td>
+    <td class="tg-sjuo">The Witches</td>
+    <td class="tg-0lax">Adventure</td>
+    <td class="tg-sjuo">It's a story about a bankrupt family who cleverly placed themselves in the house of a well-to-do businessman.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">66</td>
+    <td class="tg-sjuo">The Witches</td>
+    <td class="tg-0lax">Adventure</td>
+    <td class="tg-sjuo">I did not like Babadook, but this one is actually different. One time watch movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">67</td>
+    <td class="tg-sjuo">The Witches</td>
+    <td class="tg-0lax">Adventure</td>
+    <td class="tg-sjuo">I just watched this movie yesterday. This is an amazing movie. You can watch with your family. So, I gave 4.5 stars.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">68</td>
+    <td class="tg-sjuo">The Witches</td>
+    <td class="tg-0lax">Adventure</td>
+    <td class="tg-sjuo">Great Movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">69</td>
+    <td class="tg-sjuo">The Witches</td>
+    <td class="tg-0lax">Adventure</td>
+    <td class="tg-sjuo">One time watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">70</td>
+    <td class="tg-sjuo">Never Steal A man's second chance</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">Good Screenplay and direction. Story plot goes along.</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">71</td>
+    <td class="tg-sjuo">Never Steal A man's second chance</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">It is just an ok movie , which shows lot of potential but slowly fades away since the directors seems not too sure what to do with other characters.</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">72</td>
+    <td class="tg-sjuo">Never Steal A man's second chance</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">Super fun movie! Very violent (not for kiddies, sorry) but it was fun! Jokes were hilarious, some were in your face, others were subtle and easy to miss, very well done with showcasing Harley's trauma from her past in a subtle inobvious manner throughout the movie.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">73</td>
+    <td class="tg-sjuo">Never Steal A man's second chance</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">The movie is good to watch among with the animation creation and well presented</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">74</td>
+    <td class="tg-sjuo">Never Steal A man's second chance</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">Additionally, a young girl Cassandra (Ella Jay Basco) gets caught in the middle of Harley’s mayhem, along with Renee Montaya (Rosie Perez), Dinah Lance (Jurnee Smollett-Bell) and Helena Bertinelli (Mary Elizabeth Winstead).</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">75</td>
+    <td class="tg-sjuo">Greenland</td>
+    <td class="tg-0lax">Thriller</td>
+    <td class="tg-sjuo">nice movie with sure watch to understand the world</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">76</td>
+    <td class="tg-sjuo">Greenland</td>
+    <td class="tg-0lax">Thriller</td>
+    <td class="tg-sjuo">Very good movie for youths and teenagers. That whom loves adventure movies.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">77</td>
+    <td class="tg-sjuo">Greenland</td>
+    <td class="tg-0lax">Thriller</td>
+    <td class="tg-sjuo">Very good direction and very good acting too. Nice movie to watch in a weekend.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">78</td>
+    <td class="tg-sjuo">Greenland</td>
+    <td class="tg-0lax">Thriller</td>
+    <td class="tg-sjuo">not as sequel, good for individual watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">79</td>
+    <td class="tg-sjuo">Greenland</td>
+    <td class="tg-0lax">Thriller</td>
+    <td class="tg-sjuo">very good movie to watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">80</td>
+    <td class="tg-sjuo">Antebellum</td>
+    <td class="tg-0lax">Horror</td>
+    <td class="tg-sjuo">I did not like Babadook, but this one is actually different. One time watch movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">81</td>
+    <td class="tg-sjuo">Antebellum</td>
+    <td class="tg-0lax">Horror</td>
+    <td class="tg-sjuo">I just watched this movie yesterday. This is an amazing movie. You can watch with your family. So, I gave 4.5 stars.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">82</td>
+    <td class="tg-sjuo">Antebellum</td>
+    <td class="tg-0lax">Horror</td>
+    <td class="tg-sjuo">Great Movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">83</td>
+    <td class="tg-sjuo">Antebellum</td>
+    <td class="tg-0lax">Horror</td>
+    <td class="tg-sjuo">One time watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">84</td>
+    <td class="tg-sjuo">Antebellum</td>
+    <td class="tg-0lax">Horror</td>
+    <td class="tg-sjuo">Good Screenplay and direction. Story plot goes along.</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">85</td>
+    <td class="tg-sjuo">A secret : Dare to dream</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">Best movie watched over covid. Good family film. Happy sad emotional. I absolutely loved it</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">86</td>
+    <td class="tg-sjuo">A secret : Dare to dream</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">The main character is a grumpy stubborn old window who doesn’t use the teaching or techniques of the law of attraction but yet gets the perfect life.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">87</td>
+    <td class="tg-sjuo">A secret : Dare to dream</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">I absolutely loved it ❣It put a smile on my face , if your an avid secret fan like me by Rhonda Bryne.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">88</td>
+    <td class="tg-sjuo">A secret : Dare to dream</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">Good morning the story is good. The film has a good screenplay. All the actors were aptly selected and they have performed their role excellently...</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">89</td>
+    <td class="tg-sjuo">A secret : Dare to dream</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">Good Movie, Worth Watching it.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">90</td>
+    <td class="tg-sjuo">The Silencing</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">Best comedy I've seen in a long time. Don't know what all the bad reviews are about.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">91</td>
+    <td class="tg-sjuo">The Silencing</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">Enjoyed the subject matter and the fine acting by the female actors</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">92</td>
+    <td class="tg-sjuo">The Silencing</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">Great movie suggest you to see in theater</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">93</td>
+    <td class="tg-sjuo">The Silencing</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">Robert De Niro is a gifted artist. All his movies including this are amazing</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">94</td>
+    <td class="tg-sjuo">The Silencing</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">Interesting movie new concept</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">95</td>
+    <td class="tg-sjuo">Relic</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">It's a story about a bankrupt family who cleverly placed themselves in the house of a well-to-do businessman.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">96</td>
+    <td class="tg-sjuo">Relic</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Perfectly showing the side of society, we ignore</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">97</td>
+    <td class="tg-sjuo">Relic</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">One of the aweosme movie in long long time. Must watch for quality time spending</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">98</td>
+    <td class="tg-sjuo">Relic</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Love this movie!!the humour and the suspense,everything is so good ,a movie u can recommend to anyone</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">99</td>
+    <td class="tg-sjuo">Relic</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">The rollercoster of dark emotionsPerfect oscar deserving movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">100</td>
+    <td class="tg-sjuo">BloodShot</td>
+    <td class="tg-0lax">Sci-Fi</td>
+    <td class="tg-sjuo">1917 is 1st World War story, is immersive to watch and movie sequence seems to be in continuous shot single take.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">101</td>
+    <td class="tg-sjuo">BloodShot</td>
+    <td class="tg-0lax">Sci-Fi</td>
+    <td class="tg-sjuo">Very nice movie awesome thanks so much for the movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">102</td>
+    <td class="tg-sjuo">BloodShot</td>
+    <td class="tg-0lax">Sci-Fi</td>
+    <td class="tg-sjuo">makes the film an absolute viewing delight.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">103</td>
+    <td class="tg-sjuo">BloodShot</td>
+    <td class="tg-0lax">Sci-Fi</td>
+    <td class="tg-sjuo">Tips to you on your site for me as the best for a long shot in to get to you by</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">104</td>
+    <td class="tg-sjuo">BloodShot</td>
+    <td class="tg-0lax">Sci-Fi</td>
+    <td class="tg-sjuo">Good historical movie about war between humanity.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">105</td>
+    <td class="tg-sjuo">Sonic the Hedgehog</td>
+    <td class="tg-0lax">Adventure</td>
+    <td class="tg-sjuo">This is a great movie. Indeed there are, but there are a couple of great things about it:</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">106</td>
+    <td class="tg-sjuo">Sonic the Hedgehog</td>
+    <td class="tg-0lax">Adventure</td>
+    <td class="tg-sjuo">Like other war movies (some are boring)- here the location is Afganistan and we really enjoyed Taliban-American troops engagement</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">107</td>
+    <td class="tg-sjuo">Sonic the Hedgehog</td>
+    <td class="tg-0lax">Adventure</td>
+    <td class="tg-sjuo">The position of the outpost is brilliantly choose.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">108</td>
+    <td class="tg-sjuo">Sonic the Hedgehog</td>
+    <td class="tg-0lax">adventure</td>
+    <td class="tg-sjuo">Very good story plot. One of the best flims i've ever watched.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">109</td>
+    <td class="tg-sjuo">Sonic the Hedgehog</td>
+    <td class="tg-0lax">adventure</td>
+    <td class="tg-sjuo">Nice movie and drama movie review poster premiere</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">110</td>
+    <td class="tg-sjuo">Bad Boys for life</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">Very good movie for youths and teenagers. That whom loves adventure movies.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">111</td>
+    <td class="tg-sjuo">Bad Boys for life</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">Very good direction and very good acting too. Nice movie to watch in a weekend.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">112</td>
+    <td class="tg-sjuo">Bad Boys for life</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">not as sequel, good for individual watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">113</td>
+    <td class="tg-sjuo">Bad Boys for life</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">very good movie to watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">114</td>
+    <td class="tg-sjuo">Bad Boys for life</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">I did not like Babadook, but this one is actually different. One time watch movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">115</td>
+    <td class="tg-sjuo">The Lasr Full measure</td>
+    <td class="tg-0lax">war</td>
+    <td class="tg-sjuo">I just watched this movie yesterday. This is an amazing movie. You can watch with your family. So, I gave 4.5 stars.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">116</td>
+    <td class="tg-sjuo">The Lasr Full measure</td>
+    <td class="tg-0lax">war</td>
+    <td class="tg-sjuo">Great Movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">117</td>
+    <td class="tg-sjuo">The Lasr Full measure</td>
+    <td class="tg-0lax">war</td>
+    <td class="tg-sjuo">One time watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">118</td>
+    <td class="tg-sjuo">The Lasr Full measure</td>
+    <td class="tg-0lax">war</td>
+    <td class="tg-sjuo">Good Screenplay and direction. Story plot goes along.</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">119</td>
+    <td class="tg-sjuo">The Lasr Full measure</td>
+    <td class="tg-0lax">war</td>
+    <td class="tg-sjuo">Best movie watched over covid. Good family film. Happy sad emotional. I absolutely loved it</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">120</td>
+    <td class="tg-sjuo">Just Mercy</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">The main character is a grumpy stubborn old window who doesn’t use the teaching or techniques of the law of attraction but yet gets the perfect life.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">121</td>
+    <td class="tg-sjuo">Just Mercy</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">I absolutely loved it ❣It put a smile on my face , if your an avid secret fan like me by Rhonda Bryne.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">122</td>
+    <td class="tg-sjuo">Just Mercy</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Good morning the story is good. The film has a good screenplay. All the actors were aptly selected and they have performed their role excellently...</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">123</td>
+    <td class="tg-sjuo">Just Mercy</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Good Movie, Worth Watching it.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">124</td>
+    <td class="tg-sjuo">Just Mercy</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Best comedy I've seen in a long time. Don't know what all the bad reviews are about.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">125</td>
+    <td class="tg-sjuo">Dolittle</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">Enjoyed the subject matter and the fine acting by the female actors</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">126</td>
+    <td class="tg-sjuo">Dolittle</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">Great movie suggest you to see in theater</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">127</td>
+    <td class="tg-sjuo">Dolittle</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">Robert De Niro is a gifted artist. All his movies including this are amazing</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">128</td>
+    <td class="tg-sjuo">Dolittle</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">Interesting movie new concept</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">129</td>
+    <td class="tg-sjuo">Dolittle</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">It's a story about a bankrupt family who cleverly placed themselves in the house of a well-to-do businessman.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">130</td>
+    <td class="tg-sjuo">Bombshell</td>
+    <td class="tg-0lax">Biography</td>
+    <td class="tg-sjuo">Perfectly showing the side of society, we ignore</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">131</td>
+    <td class="tg-sjuo">Bombshell</td>
+    <td class="tg-0lax">Biography</td>
+    <td class="tg-sjuo">One of the aweosme movie in long long time. Must watch for quality time spending</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">132</td>
+    <td class="tg-sjuo">Bombshell</td>
+    <td class="tg-0lax">Biography</td>
+    <td class="tg-sjuo">Love this movie!!the humour and the suspense,everything is so good ,a movie u can recommend to anyone</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">133</td>
+    <td class="tg-sjuo">Bombshell</td>
+    <td class="tg-0lax">Biography</td>
+    <td class="tg-sjuo">The rollercoster of dark emotionsPerfect oscar deserving movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">134</td>
+    <td class="tg-sjuo">Bombshell</td>
+    <td class="tg-0lax">Biography</td>
+    <td class="tg-sjuo">1917 is 1st World War story, is immersive to watch and movie sequence seems to be in continuous shot single take.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">135</td>
+    <td class="tg-sjuo">The Lost city</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">Very nice movie awesome thanks so much for the movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">136</td>
+    <td class="tg-sjuo">The Lost city</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">makes the film an absolute viewing delight.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">137</td>
+    <td class="tg-sjuo">The Lost city</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">Tips to you on your site for me as the best for a long shot in to get to you by</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">138</td>
+    <td class="tg-sjuo">The Lost city</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">Good historical movie about war between humanity.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">139</td>
+    <td class="tg-sjuo">The Lost city</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">This is a great movie. Indeed there are, but there are a couple of great things about it:</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">140</td>
+    <td class="tg-sjuo">Life is&nbsp;&nbsp;Beautiful</td>
+    <td class="tg-0lax">comedy</td>
+    <td class="tg-sjuo">Like other war movies (some are boring)- here the location is Afganistan and we really enjoyed Taliban-American troops engagement</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">141</td>
+    <td class="tg-sjuo">Life is&nbsp;&nbsp;Beautiful</td>
+    <td class="tg-0lax">comedy</td>
+    <td class="tg-sjuo">The position of the outpost is brilliantly choose.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">142</td>
+    <td class="tg-sjuo">Life is&nbsp;&nbsp;Beautiful</td>
+    <td class="tg-0lax">comedy</td>
+    <td class="tg-sjuo">Very good story plot. One of the best flims i've ever watched.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">143</td>
+    <td class="tg-sjuo">Life is&nbsp;&nbsp;Beautiful</td>
+    <td class="tg-0lax">comedy</td>
+    <td class="tg-sjuo">Nice movie and drama movie review poster premiere</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">144</td>
+    <td class="tg-sjuo">Life is&nbsp;&nbsp;Beautiful</td>
+    <td class="tg-0lax">comedy</td>
+    <td class="tg-sjuo">Very good movie for youths and teenagers. That whom loves adventure movies.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">145</td>
+    <td class="tg-sjuo">Life is&nbsp;&nbsp;Beautiful</td>
+    <td class="tg-0lax">comedy</td>
+    <td class="tg-sjuo">Very good direction and very good acting too. Nice movie to watch in a weekend.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">146</td>
+    <td class="tg-sjuo">Good will Hunting</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">not as sequel, good for individual watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">147</td>
+    <td class="tg-sjuo">Good will Hunting</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">very good movie to watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">148</td>
+    <td class="tg-sjuo">Good will Hunting</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">I did not like Babadook, but this one is actually different. One time watch movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">149</td>
+    <td class="tg-sjuo">Good will Hunting</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">I just watched this movie yesterday. This is an amazing movie. You can watch with your family. So, I gave 4.5 stars.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">150</td>
+    <td class="tg-sjuo">Good will Hunting</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Great Movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">151</td>
+    <td class="tg-sjuo">The Shawshank redemption</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">One time watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">152</td>
+    <td class="tg-sjuo">The Shawshank redemption</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Good Screenplay and direction. Story plot goes along.</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">153</td>
+    <td class="tg-sjuo">The Shawshank redemption</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Best movie watched over covid. Good family film. Happy sad emotional. I absolutely loved it</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">154</td>
+    <td class="tg-sjuo">The Shawshank redemption</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">The main character is a grumpy stubborn old window who doesn’t use the teaching or techniques of the law of attraction but yet gets the perfect life.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">155</td>
+    <td class="tg-sjuo">The Shawshank redemption</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">I absolutely loved it ❣It put a smile on my face , if your an avid secret fan like me by Rhonda Bryne.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">156</td>
+    <td class="tg-sjuo">Angry men</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">Good morning the story is good. The film has a good screenplay. All the actors were aptly selected and they have performed their role excellently...</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">157</td>
+    <td class="tg-sjuo">Angry men</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">Good Movie, Worth Watching it.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">158</td>
+    <td class="tg-sjuo">Angry men</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">Best comedy I've seen in a long time. Don't know what all the bad reviews are about.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">159</td>
+    <td class="tg-sjuo">angry men</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">Enjoyed the subject matter and the fine acting by the female actors</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">160</td>
+    <td class="tg-sjuo">angry men</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">Great movie suggest you to see in theater</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">161</td>
+    <td class="tg-sjuo">The Dark Knight</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">Robert De Niro is a gifted artist. All his movies including this are amazing</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">162</td>
+    <td class="tg-sjuo">The Dark Knight</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">Interesting movie new concept</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">163</td>
+    <td class="tg-sjuo">The Dark Knight</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">It's a story about a bankrupt family who cleverly placed themselves in the house of a well-to-do businessman.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">164</td>
+    <td class="tg-sjuo">The Dark Knight</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">Perfectly showing the side of society, we ignore</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">165</td>
+    <td class="tg-sjuo">The Dark Knight</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">One of the aweosme movie in long long time. Must watch for quality time spending</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">166</td>
+    <td class="tg-sjuo">The Matrix</td>
+    <td class="tg-0lax">Sci-Fi</td>
+    <td class="tg-sjuo">Love this movie!!the humour and the suspense,everything is so good ,a movie u can recommend to anyone</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">167</td>
+    <td class="tg-sjuo">The Matrix</td>
+    <td class="tg-0lax">Sci-Fi</td>
+    <td class="tg-sjuo">The rollercoster of dark emotionsPerfect oscar deserving movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">168</td>
+    <td class="tg-sjuo">The Matrix</td>
+    <td class="tg-0lax">Sci-Fi</td>
+    <td class="tg-sjuo">1917 is 1st World War story, is immersive to watch and movie sequence seems to be in continuous shot single take.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">169</td>
+    <td class="tg-sjuo">The Matrix</td>
+    <td class="tg-0lax">Sci-Fi</td>
+    <td class="tg-sjuo">Very nice movie awesome thanks so much for the movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">170</td>
+    <td class="tg-sjuo">The Matrix</td>
+    <td class="tg-0lax">Sci-Fi</td>
+    <td class="tg-sjuo">makes the film an absolute viewing delight.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">171</td>
+    <td class="tg-sjuo">Forest Gump</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">Tips to you on your site for me as the best for a long shot in to get to you by</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">172</td>
+    <td class="tg-sjuo">Forest Gump</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">Good historical movie about war between humanity.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">173</td>
+    <td class="tg-sjuo">Forest Gump</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">This is a great movie. Indeed there are, but there are a couple of great things about it:</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">174</td>
+    <td class="tg-sjuo">Forest Gump</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">Like other war movies (some are boring)- here the location is Afganistan and we really enjoyed Taliban-American troops engagement</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">175</td>
+    <td class="tg-sjuo">Forest Gump</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">The position of the outpost is brilliantly choose.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">176</td>
+    <td class="tg-sjuo">America Beauty</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Very good story plot. One of the best flims i've ever watched.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">177</td>
+    <td class="tg-sjuo">America Beauty</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Nice movie and drama movie review poster premiere</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">178</td>
+    <td class="tg-sjuo">America Beauty</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Very good movie for youths and teenagers. That whom loves adventure movies.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">179</td>
+    <td class="tg-sjuo">America Beauty</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Very good direction and very good acting too. Nice movie to watch in a weekend.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">180</td>
+    <td class="tg-sjuo">America Beauty</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">not as sequel, good for individual watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">181</td>
+    <td class="tg-sjuo">The Godfather</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">very good movie to watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">182</td>
+    <td class="tg-sjuo">The Godfather</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">I did not like Babadook, but this one is actually different. One time watch movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">183</td>
+    <td class="tg-sjuo">The Godfather</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">I just watched this movie yesterday. This is an amazing movie. You can watch with your family. So, I gave 4.5 stars.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">184</td>
+    <td class="tg-sjuo">The Godfather</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">Great Movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">185</td>
+    <td class="tg-sjuo">The Godfather</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">One time watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">186</td>
+    <td class="tg-sjuo">the Departed</td>
+    <td class="tg-0lax">Thriller</td>
+    <td class="tg-sjuo">Good Screenplay and direction. Story plot goes along.</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">187</td>
+    <td class="tg-sjuo">the Departed</td>
+    <td class="tg-0lax">Thriller</td>
+    <td class="tg-sjuo">Best movie watched over covid. Good family film. Happy sad emotional. I absolutely loved it</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">188</td>
+    <td class="tg-sjuo">the Departed</td>
+    <td class="tg-0lax">Thriller</td>
+    <td class="tg-sjuo">The main character is a grumpy stubborn old window who doesn’t use the teaching or techniques of the law of attraction but yet gets the perfect life.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">189</td>
+    <td class="tg-sjuo">the Departed</td>
+    <td class="tg-0lax">Thriller</td>
+    <td class="tg-sjuo">I absolutely loved it ❣It put a smile on my face , if your an avid secret fan like me by Rhonda Bryne.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">190</td>
+    <td class="tg-sjuo">the Departed</td>
+    <td class="tg-0lax">Thriller</td>
+    <td class="tg-sjuo">Good morning the story is good. The film has a good screenplay. All the actors were aptly selected and they have performed their role excellently...</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">191</td>
+    <td class="tg-sjuo">The Prestige</td>
+    <td class="tg-0lax">Mystery</td>
+    <td class="tg-sjuo">Good Movie, Worth Watching it.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">192</td>
+    <td class="tg-sjuo">The Prestige</td>
+    <td class="tg-0lax">Mystery</td>
+    <td class="tg-sjuo">Best comedy I've seen in a long time. Don't know what all the bad reviews are about.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">193</td>
+    <td class="tg-sjuo">The Prestige</td>
+    <td class="tg-0lax">Mystery</td>
+    <td class="tg-sjuo">Enjoyed the subject matter and the fine acting by the female actors</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">194</td>
+    <td class="tg-sjuo">The Prestige</td>
+    <td class="tg-0lax">Mystery</td>
+    <td class="tg-sjuo">Great movie suggest you to see in theater</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">195</td>
+    <td class="tg-sjuo">The Prestige</td>
+    <td class="tg-0lax">Mystery</td>
+    <td class="tg-sjuo">Robert De Niro is a gifted artist. All his movies including this are amazing</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">196</td>
+    <td class="tg-sjuo">Gladiator</td>
+    <td class="tg-0lax">adventure</td>
+    <td class="tg-sjuo">Interesting movie new concept</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">197</td>
+    <td class="tg-sjuo">Gladiator</td>
+    <td class="tg-0lax">adventure</td>
+    <td class="tg-sjuo">It's a story about a bankrupt family who cleverly placed themselves in the house of a well-to-do businessman.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">198</td>
+    <td class="tg-sjuo">Gladiator</td>
+    <td class="tg-0lax">adventure</td>
+    <td class="tg-sjuo">Perfectly showing the side of society, we ignore</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">199</td>
+    <td class="tg-sjuo">Gladiator</td>
+    <td class="tg-0lax">adventure</td>
+    <td class="tg-sjuo">One of the aweosme movie in long long time. Must watch for quality time spending</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">200</td>
+    <td class="tg-sjuo">Gladiator</td>
+    <td class="tg-0lax">adventure</td>
+    <td class="tg-sjuo">Love this movie!!the humour and the suspense,everything is so good ,a movie u can recommend to anyone</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">201</td>
+    <td class="tg-sjuo">Inglourious Basterds</td>
+    <td class="tg-0lax">war</td>
+    <td class="tg-sjuo">The rollercoster of dark emotionsPerfect oscar deserving movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">202</td>
+    <td class="tg-sjuo">Inglourious Basterds</td>
+    <td class="tg-0lax">war</td>
+    <td class="tg-sjuo">1917 is 1st World War story, is immersive to watch and movie sequence seems to be in continuous shot single take.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">203</td>
+    <td class="tg-sjuo">Inglourious Basterds</td>
+    <td class="tg-0lax">war</td>
+    <td class="tg-sjuo">Very nice movie awesome thanks so much for the movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">204</td>
+    <td class="tg-sjuo">Inglourious Basterds</td>
+    <td class="tg-0lax">war</td>
+    <td class="tg-sjuo">makes the film an absolute viewing delight.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">205</td>
+    <td class="tg-sjuo">Inglourious Basterds</td>
+    <td class="tg-0lax">war</td>
+    <td class="tg-sjuo">Tips to you on your site for me as the best for a long shot in to get to you by</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">206</td>
+    <td class="tg-sjuo">Million Dollar baby</td>
+    <td class="tg-0lax">Sport</td>
+    <td class="tg-sjuo">Good historical movie about war between humanity.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">207</td>
+    <td class="tg-sjuo">Million Dollar baby</td>
+    <td class="tg-0lax">Sport</td>
+    <td class="tg-sjuo">This is a great movie. Indeed there are, but there are a couple of great things about it:</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">208</td>
+    <td class="tg-sjuo">Million Dollar baby</td>
+    <td class="tg-0lax">Sport</td>
+    <td class="tg-sjuo">Like other war movies (some are boring)- here the location is Afganistan and we really enjoyed Taliban-American troops engagement</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">209</td>
+    <td class="tg-sjuo">Million Dollar baby</td>
+    <td class="tg-0lax">Sport</td>
+    <td class="tg-sjuo">The position of the outpost is brilliantly choose.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">210</td>
+    <td class="tg-sjuo">Million Dollar baby</td>
+    <td class="tg-0lax">Sport</td>
+    <td class="tg-sjuo">Very good story plot. One of the best flims i've ever watched.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">211</td>
+    <td class="tg-sjuo">The Aviator</td>
+    <td class="tg-0lax">Biography</td>
+    <td class="tg-sjuo">Nice movie and drama movie review poster premiere</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">212</td>
+    <td class="tg-sjuo">The Aviator</td>
+    <td class="tg-0lax">Biography</td>
+    <td class="tg-sjuo">Very good movie for youths and teenagers. That whom loves adventure movies.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">213</td>
+    <td class="tg-sjuo">The Aviator</td>
+    <td class="tg-0lax">Biography</td>
+    <td class="tg-sjuo">Very good direction and very good acting too. Nice movie to watch in a weekend.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">214</td>
+    <td class="tg-sjuo">The Aviator</td>
+    <td class="tg-0lax">Biography</td>
+    <td class="tg-sjuo">not as sequel, good for individual watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">215</td>
+    <td class="tg-sjuo">The Aviator</td>
+    <td class="tg-0lax">Biography</td>
+    <td class="tg-sjuo">very good movie to watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">216</td>
+    <td class="tg-sjuo">Avatar</td>
+    <td class="tg-0lax">Fantasy</td>
+    <td class="tg-sjuo">I did not like Babadook, but this one is actually different. One time watch movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">217</td>
+    <td class="tg-sjuo">Avatar</td>
+    <td class="tg-0lax">Fantasy</td>
+    <td class="tg-sjuo">I just watched this movie yesterday. This is an amazing movie. You can watch with your family. So, I gave 4.5 stars.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">218</td>
+    <td class="tg-sjuo">Avatar</td>
+    <td class="tg-0lax">Fantasy</td>
+    <td class="tg-sjuo">Great Movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">219</td>
+    <td class="tg-sjuo">Avatar</td>
+    <td class="tg-0lax">Fantasy</td>
+    <td class="tg-sjuo">One time watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">220</td>
+    <td class="tg-sjuo">Avatar</td>
+    <td class="tg-0lax">Fantasy</td>
+    <td class="tg-sjuo">Good Screenplay and direction. Story plot goes along.</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">221</td>
+    <td class="tg-sjuo">Big Fish</td>
+    <td class="tg-0lax">Fantasy</td>
+    <td class="tg-sjuo">Best movie watched over covid. Good family film. Happy sad emotional. I absolutely loved it</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">222</td>
+    <td class="tg-sjuo">Big Fish</td>
+    <td class="tg-0lax">Fantasy</td>
+    <td class="tg-sjuo">The main character is a grumpy stubborn old window who doesn’t use the teaching or techniques of the law of attraction but yet gets the perfect life.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">223</td>
+    <td class="tg-sjuo">Big Fish</td>
+    <td class="tg-0lax">Fantasy</td>
+    <td class="tg-sjuo">I absolutely loved it ❣It put a smile on my face , if your an avid secret fan like me by Rhonda Bryne.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">224</td>
+    <td class="tg-sjuo">Big Fish</td>
+    <td class="tg-0lax">Fantasy</td>
+    <td class="tg-sjuo">Good morning the story is good. The film has a good screenplay. All the actors were aptly selected and they have performed their role excellently...</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">225</td>
+    <td class="tg-sjuo">Big Fish</td>
+    <td class="tg-0lax">Fantasy</td>
+    <td class="tg-sjuo">Good Movie, Worth Watching it.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">226</td>
+    <td class="tg-sjuo">Big Fish</td>
+    <td class="tg-0lax">Fantasy</td>
+    <td class="tg-sjuo">Best comedy I've seen in a long time. Don't know what all the bad reviews are about.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">227</td>
+    <td class="tg-sjuo">Big Fish</td>
+    <td class="tg-0lax">Fantasy</td>
+    <td class="tg-sjuo">Enjoyed the subject matter and the fine acting by the female actors</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">228</td>
+    <td class="tg-sjuo">Big Fish</td>
+    <td class="tg-0lax">Fantasy</td>
+    <td class="tg-sjuo">Great movie suggest you to see in theater</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">229</td>
+    <td class="tg-sjuo">Meet Joe Black</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">Robert De Niro is a gifted artist. All his movies including this are amazing</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">230</td>
+    <td class="tg-sjuo">Meet Joe Black</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">Interesting movie new concept</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">231</td>
+    <td class="tg-sjuo">Meet Joe Black</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">It's a story about a bankrupt family who cleverly placed themselves in the house of a well-to-do businessman.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">232</td>
+    <td class="tg-sjuo">Meet Joe Black</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">Perfectly showing the side of society, we ignore</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">233</td>
+    <td class="tg-sjuo">Meet Joe Black</td>
+    <td class="tg-0lax">Romance</td>
+    <td class="tg-sjuo">One of the aweosme movie in long long time. Must watch for quality time spending</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">234</td>
+    <td class="tg-sjuo">The Town</td>
+    <td class="tg-0lax">Thriller</td>
+    <td class="tg-sjuo">Love this movie!!the humour and the suspense,everything is so good ,a movie u can recommend to anyone</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">235</td>
+    <td class="tg-sjuo">The Town</td>
+    <td class="tg-0lax">Thriller</td>
+    <td class="tg-sjuo">The rollercoster of dark emotionsPerfect oscar deserving movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">236</td>
+    <td class="tg-sjuo">The Town</td>
+    <td class="tg-0lax">Thriller</td>
+    <td class="tg-sjuo">1917 is 1st World War story, is immersive to watch and movie sequence seems to be in continuous shot single take.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">237</td>
+    <td class="tg-sjuo">The Town</td>
+    <td class="tg-0lax">Thriller</td>
+    <td class="tg-sjuo">Very nice movie awesome thanks so much for the movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">238</td>
+    <td class="tg-sjuo">The Town</td>
+    <td class="tg-0lax">Thriller</td>
+    <td class="tg-sjuo">makes the film an absolute viewing delight.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">239</td>
+    <td class="tg-sjuo">Schndler's List</td>
+    <td class="tg-0lax">History</td>
+    <td class="tg-sjuo">Tips to you on your site for me as the best for a long shot in to get to you by</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">240</td>
+    <td class="tg-sjuo">Schndler's List</td>
+    <td class="tg-0lax">History</td>
+    <td class="tg-sjuo">Good historical movie about war between humanity.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">241</td>
+    <td class="tg-sjuo">Schndler's List</td>
+    <td class="tg-0lax">History</td>
+    <td class="tg-sjuo">This is a great movie. Indeed there are, but there are a couple of great things about it:</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">242</td>
+    <td class="tg-sjuo">Schndler's List</td>
+    <td class="tg-0lax">History</td>
+    <td class="tg-sjuo">Like other war movies (some are boring)- here the location is Afganistan and we really enjoyed Taliban-American troops engagement</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">243</td>
+    <td class="tg-sjuo">Schndler's List</td>
+    <td class="tg-0lax">History</td>
+    <td class="tg-sjuo">The position of the outpost is brilliantly choose.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">244</td>
+    <td class="tg-sjuo">Titanic</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Very good story plot. One of the best flims i've ever watched.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">245</td>
+    <td class="tg-sjuo">Titanic</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Nice movie and drama movie review poster premiere</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">246</td>
+    <td class="tg-sjuo">Titanic</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Very good movie for youths and teenagers. That whom loves adventure movies.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">247</td>
+    <td class="tg-sjuo">Titanic</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Very good direction and very good acting too. Nice movie to watch in a weekend.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">248</td>
+    <td class="tg-sjuo">Titanic</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">not as sequel, good for individual watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">249</td>
+    <td class="tg-sjuo">spy game</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">very good movie to watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">250</td>
+    <td class="tg-sjuo">spy game</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">I did not like Babadook, but this one is actually different. One time watch movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">251</td>
+    <td class="tg-sjuo">spy game</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">I just watched this movie yesterday. This is an amazing movie. You can watch with your family. So, I gave 4.5 stars.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">252</td>
+    <td class="tg-sjuo">spy game</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">Great Movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">253</td>
+    <td class="tg-sjuo">spy game</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">One time watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">254</td>
+    <td class="tg-sjuo">psycho</td>
+    <td class="tg-0lax">Mystery</td>
+    <td class="tg-sjuo">Good Screenplay and direction. Story plot goes along.</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">255</td>
+    <td class="tg-sjuo">psycho</td>
+    <td class="tg-0lax">Mystery</td>
+    <td class="tg-sjuo">Best movie watched over covid. Good family film. Happy sad emotional. I absolutely loved it</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">256</td>
+    <td class="tg-sjuo">psycho</td>
+    <td class="tg-0lax">Mystery</td>
+    <td class="tg-sjuo">The main character is a grumpy stubborn old window who doesn’t use the teaching or techniques of the law of attraction but yet gets the perfect life.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">257</td>
+    <td class="tg-sjuo">psycho</td>
+    <td class="tg-0lax">Mystery</td>
+    <td class="tg-sjuo">I absolutely loved it ❣It put a smile on my face , if your an avid secret fan like me by Rhonda Bryne.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">258</td>
+    <td class="tg-sjuo">psycho</td>
+    <td class="tg-0lax">Mystery</td>
+    <td class="tg-sjuo">Good morning the story is good. The film has a good screenplay. All the actors were aptly selected and they have performed their role excellently...</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">259</td>
+    <td class="tg-sjuo">pay check</td>
+    <td class="tg-0lax">Sci-Fi</td>
+    <td class="tg-sjuo">Good Movie, Worth Watching it.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">260</td>
+    <td class="tg-sjuo">pay check</td>
+    <td class="tg-0lax">Sci-Fi</td>
+    <td class="tg-sjuo">Best comedy I've seen in a long time. Don't know what all the bad reviews are about.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">261</td>
+    <td class="tg-sjuo">pay check</td>
+    <td class="tg-0lax">Sci-Fi</td>
+    <td class="tg-sjuo">Enjoyed the subject matter and the fine acting by the female actors</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">262</td>
+    <td class="tg-sjuo">pay check</td>
+    <td class="tg-0lax">Sci-Fi</td>
+    <td class="tg-sjuo">Great movie suggest you to see in theater</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">263</td>
+    <td class="tg-sjuo">pay check</td>
+    <td class="tg-0lax">Sci-Fi</td>
+    <td class="tg-sjuo">Robert De Niro is a gifted artist. All his movies including this are amazing</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">264</td>
+    <td class="tg-sjuo">Mission impossible II</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">Interesting movie new concept</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">265</td>
+    <td class="tg-sjuo">Mission impossible II</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">It's a story about a bankrupt family who cleverly placed themselves in the house of a well-to-do businessman.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">266</td>
+    <td class="tg-sjuo">Mission impossible II</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">Perfectly showing the side of society, we ignore</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">267</td>
+    <td class="tg-sjuo">Mission impossible II</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">One of the aweosme movie in long long time. Must watch for quality time spending</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">268</td>
+    <td class="tg-sjuo">Mission impossible II</td>
+    <td class="tg-0lax">Action</td>
+    <td class="tg-sjuo">loved it</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">269</td>
+    <td class="tg-sjuo">Pay it forward</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">The rollercoster of dark emotionsPerfect oscar deserving movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">270</td>
+    <td class="tg-sjuo">Pay it forward</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">1917 is 1st World War story, is immersive to watch and movie sequence seems to be in continuous shot single take.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">271</td>
+    <td class="tg-sjuo">Pay it forward</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Very nice movie awesome thanks so much for the movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">272</td>
+    <td class="tg-sjuo">Pay it forward</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">makes the film an absolute viewing delight.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">273</td>
+    <td class="tg-sjuo">Pay it forward</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Tips to you on your site for me as the best for a long shot in to get to you by</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">274</td>
+    <td class="tg-sjuo">Invictus</td>
+    <td class="tg-0lax">History</td>
+    <td class="tg-sjuo">Good historical movie about war between humanity.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">275</td>
+    <td class="tg-sjuo">Invictus</td>
+    <td class="tg-0lax">History</td>
+    <td class="tg-sjuo">This is a great movie. Indeed there are, but there are a couple of great things about it:</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">276</td>
+    <td class="tg-sjuo">Invictus</td>
+    <td class="tg-0lax">History</td>
+    <td class="tg-sjuo">Like other war movies (some are boring)- here the location is Afganistan and we really enjoyed Taliban-American troops engagement</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">277</td>
+    <td class="tg-sjuo">Invictus</td>
+    <td class="tg-0lax">History</td>
+    <td class="tg-sjuo">The position of the outpost is brilliantly choose.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">278</td>
+    <td class="tg-sjuo">Invictus</td>
+    <td class="tg-0lax">History</td>
+    <td class="tg-sjuo">Very good story plot. One of the best flims i've ever watched.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">279</td>
+    <td class="tg-sjuo">Se7ev</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">Nice movie and drama movie review poster premiere</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">280</td>
+    <td class="tg-sjuo">Se7ev</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">Very good movie for youths and teenagers. That whom loves adventure movies.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">281</td>
+    <td class="tg-sjuo">Se7ev</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">Very good direction and very good acting too. Nice movie to watch in a weekend.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">282</td>
+    <td class="tg-sjuo">Se7ev</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">not as sequel, good for individual watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">283</td>
+    <td class="tg-sjuo">Se7ev</td>
+    <td class="tg-0lax">Crime</td>
+    <td class="tg-sjuo">very good movie to watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">284</td>
+    <td class="tg-sjuo">Saving private Ryan</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">I did not like Babadook, but this one is actually different. One time watch movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">285</td>
+    <td class="tg-sjuo">Cast Away</td>
+    <td class="tg-0lax">adventure</td>
+    <td class="tg-sjuo">I just watched this movie yesterday. This is an amazing movie. You can watch with your family. So, I gave 4.5 stars.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">286</td>
+    <td class="tg-sjuo">Cast Away</td>
+    <td class="tg-0lax">adventure</td>
+    <td class="tg-sjuo">Great Movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">287</td>
+    <td class="tg-sjuo">Cast Away</td>
+    <td class="tg-0lax">adventure</td>
+    <td class="tg-sjuo">One time watch</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">288</td>
+    <td class="tg-sjuo">Cast Away</td>
+    <td class="tg-0lax">adventure</td>
+    <td class="tg-sjuo">Good Screenplay and direction. Story plot goes along.</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">289</td>
+    <td class="tg-sjuo">the last summer</td>
+    <td class="tg-0lax">action</td>
+    <td class="tg-sjuo">Best movie watched over covid. Good family film. Happy sad emotional. I absolutely loved it</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">290</td>
+    <td class="tg-sjuo">the last summer</td>
+    <td class="tg-0lax">action</td>
+    <td class="tg-sjuo">The main character is a grumpy stubborn old window who doesn’t use the teaching or techniques of the law of attraction but yet gets the perfect life.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">291</td>
+    <td class="tg-sjuo">the last summer</td>
+    <td class="tg-0lax">action</td>
+    <td class="tg-sjuo">I absolutely loved it ❣It put a smile on my face , if your an avid secret fan like me by Rhonda Bryne.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">292</td>
+    <td class="tg-sjuo">the last summer</td>
+    <td class="tg-0lax">action</td>
+    <td class="tg-sjuo">Good morning the story is good. The film has a good screenplay. All the actors were aptly selected and they have performed their role excellently...</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">293</td>
+    <td class="tg-sjuo">the last summer</td>
+    <td class="tg-0lax">action</td>
+    <td class="tg-sjuo">Good Movie, Worth Watching it.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">294</td>
+    <td class="tg-sjuo">Munich</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Best comedy I've seen in a long time. Don't know what all the bad reviews are about.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">295</td>
+    <td class="tg-sjuo">Munich</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Enjoyed the subject matter and the fine acting by the female actors</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">296</td>
+    <td class="tg-sjuo">Munich</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Great movie suggest you to see in theater</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">297</td>
+    <td class="tg-sjuo">Munich</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Robert De Niro is a gifted artist. All his movies including this are amazing</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">298</td>
+    <td class="tg-sjuo">Munich</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Interesting movie new concept</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">299</td>
+    <td class="tg-sjuo">The longest yard</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">It's a story about a bankrupt family who cleverly placed themselves in the house of a well-to-do businessman.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">300</td>
+    <td class="tg-sjuo">The longest yard</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">Perfectly showing the side of society, we ignore</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">301</td>
+    <td class="tg-sjuo">The longest yard</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">One of the aweosme movie in long long time. Must watch for quality time spending</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">302</td>
+    <td class="tg-sjuo">The longest yard</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">Love this movie!!the humour and the suspense,everything is so good ,a movie u can recommend to anyone</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">303</td>
+    <td class="tg-sjuo">The longest yard</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">The rollercoster of dark emotionsPerfect oscar deserving movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">304</td>
+    <td class="tg-sjuo">Bruce Almighty</td>
+    <td class="tg-0lax">Fantasy</td>
+    <td class="tg-sjuo">1917 is 1st World War story, is immersive to watch and movie sequence seems to be in continuous shot single take.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">305</td>
+    <td class="tg-sjuo">Bruce Almighty</td>
+    <td class="tg-0lax">Fantasy</td>
+    <td class="tg-sjuo">Very nice movie awesome thanks so much for the movie</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">306</td>
+    <td class="tg-sjuo">Bruce Almighty</td>
+    <td class="tg-0lax">Fantasy</td>
+    <td class="tg-sjuo">makes the film an absolute viewing delight.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">307</td>
+    <td class="tg-sjuo">Bruce Almighty</td>
+    <td class="tg-0lax">Fantasy</td>
+    <td class="tg-sjuo">Tips to you on your site for me as the best for a long shot in to get to you by</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">308</td>
+    <td class="tg-sjuo">Bruce Almighty</td>
+    <td class="tg-0lax">Fantasy</td>
+    <td class="tg-sjuo">Good historical movie about war between humanity.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">309</td>
+    <td class="tg-sjuo">Inception</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">This is a great movie. Indeed there are, but there are a couple of great things about it:</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">310</td>
+    <td class="tg-sjuo">Inception</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">Like other war movies (some are boring)- here the location is Afganistan and we really enjoyed Taliban-American troops engagement</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">311</td>
+    <td class="tg-sjuo">Inception</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">The position of the outpost is brilliantly choose.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">312</td>
+    <td class="tg-sjuo">Inception</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">Very good story plot. One of the best flims i've ever watched.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">313</td>
+    <td class="tg-sjuo">Inception</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">Nice movie and drama movie review poster premiere</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">314</td>
+    <td class="tg-sjuo">Sir</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">This movie was actually good and I like the movie. I recommended You to watch this movie because this movie is actually very good people also like it I am sure that your very happy after watching this movie...</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">315</td>
+    <td class="tg-sjuo">Sir</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Sounds interesting. Shall look for this movie.</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">316</td>
+    <td class="tg-sjuo">Sir</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Its actually amazing based on the fact the stereotypical prejudice and divided of society against the person with which you can actually find that one connection or understanding. Nuanced performances from actors! While Tillottama is already established and known for her performances, where was Vivek hiding all this while??..</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">317</td>
+    <td class="tg-sjuo">Sir</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">It’s so thought provoking. The romance, subtle emotions, story with super acting &amp; direction is just staying with me for days after seeing it. Will see again ...</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">318</td>
+    <td class="tg-sjuo">Sir</td>
+    <td class="tg-0lax">Drama</td>
+    <td class="tg-sjuo">Nice</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">319</td>
+    <td class="tg-sjuo">Chhalaang</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">Good movie on sports youngsters watch it.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">320</td>
+    <td class="tg-sjuo">Chhalaang</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">Good Timepass Movie on OTT</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">321</td>
+    <td class="tg-sjuo">Chhalaang</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">Childish movie..... couldn't understand the purpose of this movie????... flawed acting by RK Rao and same "stereo" type acting by Nushrat... Nice to see Satsih Kaushik and Saurabh Shukhla.......</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">322</td>
+    <td class="tg-sjuo">Chhalaang</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">Very nice movie. Rajkumar Rao is as usual endearing. Good direction by Hansal Mehta.</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">323</td>
+    <td class="tg-sjuo">Chhalaang</td>
+    <td class="tg-0lax">Comedy</td>
+    <td class="tg-sjuo">Nice movie, Acting of rajkumar is at best but the story writing is not that good</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">324</td>
+    <td class="tg-sjuo">Suraj pe Mangal Bhari</td>
+    <td class="tg-0lax">Family</td>
+    <td class="tg-sjuo">This movie was good you should watch this movie but sometime this movie disappoint you so it's your choice</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">325</td>
+    <td class="tg-sjuo">Suraj pe Mangal Bhari</td>
+    <td class="tg-0lax">Family</td>
+    <td class="tg-sjuo">What kind of movie is this? Complete trash.</td>
+    <td class="tg-0lax">0</td>
+  </tr>
+  </tbody>
+</table>
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">
+    <a href="https://mdbootstrap.com/education/bootstrap/"></a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+  <script src="{% static "jss/jquery-3.3.1.min.js" %}"></script>
+  <script src="{% static "jss/jquery-migrate-3.0.1.min.js" %}"></script>
+  <script src="{% static "jss/jquery-ui.js" %}"></script>
+  <script src="{% static "jss/popper.min.js" %}"></script>
+  <script src="{% static "jss/bootstrap.min.js" %}"></script>
+  <script src="{% static "jss/owl.carousel.min.js" %}"></script>
+  <script src="{% static "jss/jquery.stellar.min.js" %}"></script>
+  <script src="{% static "jss/jquery.countdown.min.js" %}"></script>
+  <script src="{% static "jss/bootstrap-datepicker.min.js" %}"></script>
+  <script src="{% static "jss/jquery.easing.1.3.js" %}"></script>
+  <script src="{% static "jss/aos.js" %}"></script>
+  <script src="{% static "jss/jquery.fancybox.min.js" %}"></script>
+  <script src="{% static "jss/jquery.sticky.js" %}"></script>
+
+  
+  <script src="{% static "jss/main.js" %}"></script>
+    
+  </body>
+</html>
